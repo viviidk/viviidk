@@ -3,450 +3,462 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>华侨友谊供应链 · 企业介绍</title>
+    <title>广东华侨友谊供应链管理有限公司</title>
     <style>
-        /* 全局重置 & 公众号友好字体 */
+        /* ===== 全局重置 & 基础 ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            background: #f5f3f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, "Microsoft YaHei", sans-serif;
+            background: #f0f3f7;
             color: #2c2c2c;
-            padding: 20px 0 40px 0;
+            line-height: 1.8;
+            padding: 0;
+            margin: 0;
         }
-        .page {
+
+        .wrapper {
             max-width: 640px;
-            width: 100%;
+            margin: 0 auto;
             background: #ffffff;
-            border-radius: 28px 28px 24px 24px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
             overflow: hidden;
-            padding: 0 20px 30px 20px;
         }
 
-        /* 排版元素 */
-        h1, h2, h3, p, ul, .card, .grid, .tag, .stat, .footer-meta {
-            font-family: inherit;
+        /* ===== 通用 ===== */
+        .section {
+            padding: 28px 24px 20px;
         }
 
-        /* 头部 */
-        .hero {
-            background: linear-gradient(145deg, #f1ede8 0%, #e8e2da 100%);
-            margin: 0 -20px 24px -20px;
-            padding: 32px 24px 28px 24px;
-            border-radius: 0 0 40px 40px;
-            text-align: center;
-            border-bottom: 2px solid #c9b7a8;
-        }
-        .hero-badge {
-            display: inline-block;
-            background: #8f7a68;
-            color: white;
-            font-size: 12px;
-            letter-spacing: 2px;
-            padding: 4px 14px;
-            border-radius: 30px;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        .hero h1 {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #1f1a16;
-            margin: 6px 0 4px 0;
-        }
-        .hero .sub {
-            font-size: 15px;
-            color: #4d3f34;
-            background: rgba(255,255,240,0.5);
-            display: inline-block;
-            padding: 2px 18px;
-            border-radius: 30px;
-            backdrop-filter: blur(2px);
-            margin-top: 6px;
-            font-weight: 500;
-            border: 1px solid #dacfc4;
-        }
-        .hero .date {
-            font-size: 13px;
-            color: #6b5d50;
-            margin-top: 12px;
-            letter-spacing: 1px;
-        }
-
-        /* 核心标语 */
-        .slogan-box {
-            background: #f9f7f4;
-            border-left: 6px solid #b7a186;
-            padding: 16px 18px;
-            border-radius: 12px;
-            margin: 16px 0 22px 0;
-            font-weight: 500;
-            color: #2d241e;
-            font-size: 15px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-        }
-        .slogan-box strong {
-            color: #7b5d47;
-        }
-
-        /* 通用标题 */
         .section-title {
             font-size: 20px;
             font-weight: 700;
-            margin: 32px 0 16px 0;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #e1d5cb;
-            position: relative;
+            color: #1a4a7a;
             letter-spacing: 1px;
-            color: #1e1712;
-        }
-        .section-title:before {
-            content: "◆";
-            color: #b18d74;
-            margin-right: 10px;
-            font-size: 18px;
+            padding-bottom: 10px;
+            margin-bottom: 16px;
+            border-bottom: 3px solid #e53935;
+            display: inline-block;
+            position: relative;
         }
 
-        .section-title-sm {
-            font-size: 18px;
-            font-weight: 650;
-            margin: 22px 0 10px 0;
-            color: #2f241d;
-            letter-spacing: 0.5px;
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #1a4a7a;
+            border-radius: 2px;
         }
 
-        /* 段落 */
-        p {
+        .section-sub {
             font-size: 15px;
-            color: #2b231e;
-            margin-bottom: 14px;
-            word-break: break-word;
-        }
-        .text-muted {
-            color: #5b4d40;
-            font-size: 14px;
-        }
-        .highlight-box {
-            background: #f6f2ed;
-            padding: 14px 18px;
-            border-radius: 16px;
-            margin: 18px 0;
-            border: 1px solid #e6dbd1;
+            color: #666;
+            margin-top: -6px;
+            margin-bottom: 16px;
         }
 
-        /* 卡片网格 (资源/业务) */
-        .grid-2col {
+        .section-about p {
+            text-indent: 2em;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        /* ===== Logo 通用 ===== */
+        .logo-img {
+            display: block;
+            max-width: 120px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* ===== 头部 Logo ===== */
+        .header-logo {
+            background: linear-gradient(135deg, #1a4a7a 0%, #2a6a9a 100%);
+            padding: 20px 0 0 0;
+            text-align: center;
+        }
+
+        /* ===== 头部 ===== */
+        .header {
+            background: linear-gradient(135deg, #1a4a7a 0%, #2a6a9a 100%);
+            padding: 16px 28px 36px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            right: -20%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -10%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .header-brand {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-brand .name {
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 2px;
+            line-height: 1.3;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .header-brand .name .highlight {
+            color: #ffffff;
+        }
+
+        .header-brand .slogan {
+            font-size: 16px;
+            color: #ffffff;
+            margin-top: 10px;
+            letter-spacing: 4px;
+            font-weight: 300;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 12px;
+            display: inline-block;
+        }
+
+        .header-brand .slogan .gold {
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .header-line {
+            width: 48px;
+            height: 3px;
+            background: #e53935;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ===== 公司概况 ===== */
+        .section-about {
+            background: #f8faff;
+            padding-top: 32px;
+            padding-bottom: 28px;
+        }
+
+        .highlight-blue-bold {
+            font-weight: 700;
+            color: #1a4a7a;
+        }
+
+        /* ===== 核心优势 ===== */
+        .section-core {
+            background: #ffffff;
+            padding-top: 28px;
+            padding-bottom: 16px;
+        }
+
+        .core-advantage-text {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.9;
+            text-indent: 2em;
+            margin-bottom: 0;
+            text-align: justify;
+        }
+
+        /* ===== 核心业务 ===== */
+        .section-business {
+            background: #f8faff;
+            padding-top: 28px;
+            padding-bottom: 16px;
+        }
+
+        .business-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            margin: 12px 0 16px 0;
+            gap: 12px;
+            margin-top: 6px;
         }
-        .card {
-            background: #fbfaf8;
-            border-radius: 18px;
+
+        .business-item {
+            background: #ffffff;
+            border-radius: 10px;
             padding: 16px 14px;
-            border: 1px solid #eae2da;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.01);
-            transition: 0.1s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e0e8f0;
         }
-        .card h4 {
+
+        .business-item .b-title {
             font-size: 15px;
-            font-weight: 700;
-            color: #3d2d22;
+            font-weight: 600;
+            color: #1a4a7a;
             margin-bottom: 4px;
             display: flex;
             align-items: center;
             gap: 6px;
         }
-        .card h4 span {
-            background: #cfbcaa;
-            color: white;
-            font-size: 12px;
-            border-radius: 40px;
-            padding: 0 10px;
-            line-height: 20px;
-        }
-        .card p, .card li {
-            font-size: 13.5px;
-            color: #3d342d;
-            list-style: none;
-        }
-        .card ul {
-            padding-left: 0;
-            margin-top: 4px;
-        }
-        .card li {
-            padding: 3px 0 3px 18px;
-            position: relative;
-        }
-        .card li:before {
-            content: "•";
-            color: #ad8b73;
-            font-weight: bold;
-            position: absolute;
-            left: 2px;
-        }
 
-        /* 数据标签 */
-        .stat-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 12px;
-            margin: 10px 0 12px 0;
-        }
-        .stat-item {
-            background: #ece5de;
-            border-radius: 40px;
-            padding: 2px 18px 2px 16px;
-            font-size: 14px;
-            font-weight: 500;
-            color: #2a1f18;
-            line-height: 32px;
-            white-space: nowrap;
-        }
-        .stat-item strong {
-            font-size: 17px;
-            color: #5d3f2d;
-        }
-
-        /* 帮扶产品表格样式 (纯文本) */
-        .product-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px 14px;
-            background: #f6f1eb;
-            border-radius: 20px;
-            padding: 14px 16px;
-            margin: 12px 0 8px 0;
-            border: 1px solid #ddd0c4;
-        }
-        .product-item {
-            font-size: 13.5px;
-            padding: 4px 0;
-            border-bottom: 1px dashed #d6c8bb;
-            display: flex;
-            justify-content: space-between;
-        }
-        .product-item .name {
-            font-weight: 500;
-            color: #221b15;
-        }
-        .product-item .org {
-            color: #6f5b4a;
-            font-size: 12px;
-        }
-
-        /* 列表 */
-        .styled-list {
-            padding-left: 20px;
-            margin: 8px 0 14px 0;
-        }
-        .styled-list li {
-            font-size: 14.5px;
-            margin-bottom: 6px;
-            color: #2b221c;
-        }
-
-        /* 展望部分 */
-        .future-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 16px 0 10px 0;
-        }
-        .future-item {
-            background: #f3efe9;
-            border-radius: 20px;
-            padding: 14px 12px;
-            text-align: center;
-            border: 1px solid #ded3c8;
-        }
-        .future-item h4 {
-            font-size: 16px;
-            font-weight: 700;
-            color: #3f2f23;
-        }
-        .future-item p {
-            font-size: 13px;
-            color: #4b3d32;
-            margin: 4px 0 0 0;
-        }
-
-        /* 底部信息 */
-        .footer-meta {
-            margin-top: 36px;
-            padding-top: 22px;
-            border-top: 2px solid #ece3da;
-            text-align: center;
-            font-size: 14px;
-            color: #5f4d3d;
-            background: #fbf9f7;
-            border-radius: 24px;
-            padding: 22px 16px 16px 16px;
-        }
-        .footer-meta .address {
-            font-weight: 500;
-            letter-spacing: 0.3px;
-        }
-        .footer-meta .contact {
-            color: #7f6857;
-            margin-top: 4px;
-            font-size: 13px;
-        }
-        .footer-tag {
+        .business-item .b-title .icon {
             display: inline-block;
-            background: #d9cbbf;
-            padding: 2px 18px;
-            border-radius: 40px;
-            color: #2f241d;
+            width: 6px;
+            height: 6px;
+            background: #e53935;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .business-item .b-desc {
+            font-size: 13.5px;
+            color: #555;
+            line-height: 1.6;
+            text-indent: 0;
+        }
+
+        /* ===== 展望未来 ===== */
+        .section-future {
+            background: #f8faff;
+            padding-top: 28px;
+            padding-bottom: 20px;
+        }
+
+        .future-text {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.9;
+            text-indent: 2em;
+            text-align: justify;
+        }
+
+        /* ===== 结语 ===== */
+        .section-epilogue {
+            background: #1a4a7a;
+            padding: 32px 28px 28px;
+            text-align: center;
+        }
+
+        .section-epilogue .epi-text {
+            font-size: 17px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.92);
+            letter-spacing: 1px;
+            line-height: 1.9;
+        }
+
+        .section-epilogue .epi-text .highlight {
+            color: #ff6b6b;
+            font-weight: 400;
+        }
+
+        /* ===== 页脚 Logo ===== */
+        .footer-logo {
+            background: #143a5e;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background: #143a5e;
+            padding: 16px 24px 26px;
+            text-align: center;
+        }
+
+        .footer .address {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.70);
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+        }
+
+        .footer .address .icon-loc {
+            display: inline-block;
+            margin-right: 4px;
+        }
+
+        .footer .copy {
             font-size: 12px;
-            letter-spacing: 2px;
-            margin-top: 6px;
+            color: rgba(255, 255, 255, 0.35);
+            margin-top: 10px;
+            letter-spacing: 1px;
         }
 
-        /* 适配公众号: 手机优化 */
+        /* ===== 响应式 ===== */
         @media (max-width: 480px) {
-            .page { padding: 0 14px 20px 14px; }
-            .hero { padding: 24px 16px 20px 16px; }
-            .hero h1 { font-size: 24px; }
-            .grid-2col { grid-template-columns: 1fr; }
-            .future-grid { grid-template-columns: 1fr; }
-            .product-grid { grid-template-columns: 1fr; }
-            .stat-row { flex-wrap: wrap; }
-            .stat-item { white-space: normal; }
+            .section {
+                padding: 22px 18px 16px;
+            }
+            .header {
+                padding: 12px 20px 30px;
+            }
+            .header-logo {
+                padding-top: 14px;
+            }
+            .header-brand .name {
+                font-size: 22px;
+                letter-spacing: 1px;
+            }
+            .header-brand .slogan {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+            .section-title {
+                font-size: 18px;
+            }
+            .business-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .business-item {
+                padding: 14px 12px;
+            }
+            .business-item .b-title {
+                font-size: 14px;
+            }
+            .business-item .b-desc {
+                font-size: 13px;
+            }
+            .section-epilogue .epi-text {
+                font-size: 15px;
+            }
+            .section-about p {
+                font-size: 15.5px;
+            }
+            .core-advantage-text {
+                font-size: 15px;
+            }
+            .future-text {
+                font-size: 15px;
+            }
+            .logo-img {
+                max-width: 100px;
+            }
         }
 
-        /* 辅助 */
-        .mt-1 { margin-top: 6px; }
-        .mb-1 { margin-bottom: 6px; }
-        .inline-icon { margin-right: 4px; }
-        hr { border: none; border-top: 1px solid #e1d4c9; margin: 22px 0 14px 0; }
+        @media (max-width: 380px) {
+            .business-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-<div class="page">
+    <div class="wrapper">
 
-    <!-- 头部 -->
-    <div class="hero">
-        <div class="hero-badge">广物控股集团 · 旗下子公司</div>
-        <h1>广东华侨友谊供应链管理有限公司</h1>
-        <div class="sub">汇聚国资优势 · 赋能乡村振兴</div>
-        <div class="date">2026年7月</div>
+        <!-- ===== 上方 Logo（相对路径引用） ===== -->
+        <div class="header-logo">
+            <img src="fb840fbf470be11fc487332bbf86aaaf.png" alt="广物控股" class="logo-img">
+        </div>
+
+        <!-- ===== 头部 ===== -->
+        <header class="header">
+            <div class="header-brand">
+                <div class="name">
+                    广东华侨友谊<br><span class="highlight">供应链管理有限公司</span>
+                </div>
+                <div class="header-line"></div>
+                <div class="slogan">
+                    凝聚国资优势 · <span class="gold">赋能乡村振兴</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== 公司概况 ===== -->
+        <section class="section section-about">
+            <h2 class="section-title">公司概况</h2>
+            <p>
+                <span class="highlight-blue-bold">广东华侨友谊供应链管理有限公司是广物控股集团旗下广东华侨友谊有限公司的子公司，是一家聚焦国资国企消费帮扶与企业福利集采服务的专业化供应链平台企业。</span>公司依托广物控股集团省属国企的雄厚资本和坚实背景，立足华侨友谊在酒类商贸流通、园区开发运营等领域数十年的品牌积淀，深度整合各大购物平台的供应商体系，初步打造一个以<span class="highlight-blue-bold">「全品类布局、数字化赋能、专业化运营」</span>为核心理念的供应链服务平台。
+            </p>
+            <p>
+                公司紧密围绕广东省国资委<span class="highlight-blue-bold">「千企帮干镇、万企兴万村」</span>的工作部署，积极投身乡村振兴事业，努力打造国资国企帮扶臻品，形成以福利集采、食材配送、礼盒定制等为一体的产品矩阵，为国有企业、机关事业单位及大型企业客户提供一站式、全品类、高质量的综合服务，未来力争成为粤港澳大湾区最具影响力的综合性供应链服务标杆。
+            </p>
+        </section>
+
+        <!-- ===== 核心优势 ===== -->
+        <section class="section section-core">
+            <h2 class="section-title">核心优势</h2>
+            <p class="core-advantage-text">
+                华侨友谊供应链依托数十年积淀形成多元核心竞争优势。作为广东省高端酒水区域经销商，拥有成熟名酒渠道体系，具备突出的酒类品牌运营能力；“华侨友谊” 品牌经过长期市场检验，拥有良好口碑与信用基础；在粤港澳大湾区持有大规模土地与物业资源，线下实体渠道网络覆盖面广；同时搭建了规范财务体系与严谨风控机制，资金保障可靠；自2025年加速布局福利品业务，已建成完善的产品供应服务体系，服务多家政企单位，扎实的运营经验全方位赋能供应链业务持续拓展。
+            </p>
+        </section>
+
+        <!-- ===== 核心业务 ===== -->
+        <section class="section section-business">
+            <h2 class="section-title">核心业务</h2>
+            <p class="section-sub">四大板块协同发力，打造专业化服务体系</p>
+            <div class="business-grid">
+                <div class="business-item">
+                    <div class="b-title"><span class="icon"></span>消费帮扶产品</div>
+                    <div class="b-desc">整合帮扶地区优质农产品，线上线下品牌化推广，建立全链路品控。</div>
+                </div>
+                <div class="business-item">
+                    <div class="b-title"><span class="icon"></span>企业福利集采</div>
+                    <div class="b-desc">提供节日、生日等福利一站式集采，支持专属商城与额度管理。</div>
+                </div>
+                <div class="business-item">
+                    <div class="b-title"><span class="icon"></span>节庆礼品定制</div>
+                    <div class="b-desc">聚焦中秋、国庆、元旦、春节等重大节庆消费节点，整合优质供应链资源，推出节庆礼盒、伴手礼、企业定制礼品等产品线。</div>
+                </div>
+                <div class="business-item">
+                    <div class="b-title"><span class="icon"></span>小程序商城运营</div>
+                    <div class="b-desc">自主运营微信小程序商城作为公司线上零售与采购服务的核心阵地。支持B2B2C双模式。</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 展望未来 ===== -->
+        <section class="section section-future">
+            <h2 class="section-title">展望未来</h2>
+            <p class="future-text">
+                2027年及未来，公司将持续推动规模化发展，扩大SKU规模、拓展客户数量、提升体量，力争成为省属国资体系消费帮扶与供应链服务领域的标杆企业；同时推进品牌化升级，系统性打造国资国企帮扶臻品品牌矩阵，提升产品附加值；深化数字化赋能，优化小程序商城功能，构建智能化选品、定价与营销决策体系；并持续深耕乡村振兴，深入落实“百千万工程”，扩大帮扶产品覆盖面，探索更多“消费帮扶+”创新模式，为广东省乡村振兴事业贡献更大力量。
+            </p>
+        </section>
+
+        <!-- ===== 结语 ===== -->
+        <section class="section-epilogue">
+            <div class="epi-text">
+                华侨友谊供应链公司将始终秉持<span class="highlight">“凝聚国资优势、赋能乡村振兴”</span>的初心，立足广物控股集团与省属国企体系，辐射粤港澳大湾区以及更广阔的市场空间。
+            </div>
+        </section>
+
+        <!-- ===== 下方 Logo（相对路径引用） ===== -->
+        <div class="footer-logo">
+            <img src="fb840fbf470be11fc487332bbf86aaaf.png" alt="广物控股" class="logo-img">
+        </div>
+
+        <!-- ===== 页脚 ===== -->
+        <footer class="footer">
+            <div class="address">
+                <span class="icon-loc">📍</span> 广东省广州市天河区天河东路65号
+            </div>
+            <div class="copy">
+                © 2026 广东华侨友谊供应链管理有限公司
+            </div>
+        </footer>
+
     </div>
-
-    <!-- 企业概况 -->
-    <div class="slogan-box">
-        <strong>华侨友谊供应链</strong> 是广物控股集团旗下广东华侨友谊有限公司的子公司，聚焦国资国企消费帮扶与企业福利集采，打造“全品类布局、数字化赋能、专业化运营”的供应链服务平台。
-    </div>
-
-    <p>公司紧密围绕广东省国资委“千企帮千镇、万企兴万村”的工作部署，积极投身乡村振兴事业，形成以福利集采、食材配送、礼盒定制等为一体的产品矩阵，为国有企业、机关事业单位及大型企业客户提供一站式、全品类、高质量的综合服务，力争成为粤港澳大湾区最具影响力的综合性供应链服务标杆。</p>
-
-    <!-- 资源优势 -->
-    <h2 class="section-title">资源优势</h2>
-    <p>依托广物控股集团强大平台，汇聚华侨友谊六十余年深耕优势，整合南粤分享汇优质供应链，形成 <strong>“国资平台+品牌积淀+供应链能力”</strong> 三位一体的独特竞争力。</p>
-
-    <div class="highlight-box">
-        <h3 style="font-size:16px; font-weight:700; color:#3d2d22;">广物控股集团 · 平台背书</h3>
-        <p style="font-size:14px;">省属国有独资大型骨干企业，连续20多年入围中国企业500强，“AAA”级信用评级，集团“商贸及供应链服务”主业与公司业务高度契合，提供强大品牌信用与战略资源保障。</p>
-    </div>
-
-    <h3 class="section-title-sm">华侨友谊 · 核心优势</h3>
-    <div class="grid-2col">
-        <div class="card"><h4>🍷 酒类品牌运营</h4><p>茅台酒专卖店及名酒专营体系，高端酒类选品、品控、渠道管理经验丰富，赋能节庆礼品与福利集采。</p></div>
-        <div class="card"><h4>🏢 物业与渠道</h4><p>粤港澳大湾区运营管理约47万㎡土地及21万㎡物业，覆盖广州、深圳、东莞、惠州等，线下实体支撑强劲。</p></div>
-        <div class="card"><h4>🛡️ 品牌积淀与信誉</h4><p>“华侨友谊”品牌数十年市场检验，在省属国企及消费者中拥有高认知度与美誉度，信用坚实。</p></div>
-        <div class="card"><h4>💰 资金与风控</h4><p>注册资本13,980万元，A级纳税人，规范财务体系与严格风控机制，保障业务安全高效。</p></div>
-        <div class="card" style="grid-column: 1 / -1;"><h4>📦 福利业务经验</h4><p>自2025年快速布局福利品业务，已覆盖集团内外十余家政企单位，为供应链运营奠定坚实基础。</p></div>
-    </div>
-
-    <h3 class="section-title-sm">供应链与渠道资源</h3>
-    <div class="stat-row">
-        <span class="stat-item"><strong>1,200+</strong> 优质供应商</span>
-        <span class="stat-item"><strong>25</strong> 大品类</span>
-        <span class="stat-item">自研商城 · 数据中台</span>
-        <span class="stat-item">学习强国 · 粤工惠享</span>
-    </div>
-    <ul class="styled-list">
-        <li>成熟电商运营SOP、营销活动规范、数据分析模型，自主开发商城及会员系统。</li>
-        <li>整合粮油米面、山珍干货、茶叶饮品、腊味礼盒、地方特产等帮扶农副产品。</li>
-        <li>与省国资委、省总工会深度合作，多平台运营经验丰富。</li>
-        <li>对接省属企业工会福利、员工内购及线上多平台，形成立体化销售矩阵。</li>
-    </ul>
-
-    <!-- 国资帮扶臻品 表格 -->
-    <h3 class="section-title-sm">省国资国企帮扶臻品</h3>
-    <div class="product-grid">
-        <div class="product-item"><span class="name">罗平稻米</span><span class="org">省国资委</span></div>
-        <div class="product-item"><span class="name">燕塘乳业</span><span class="org">梅州市大埔县</span></div>
-        <div class="product-item"><span class="name">阳春春砂仁</span><span class="org">广新控股集团</span></div>
-        <div class="product-item"><span class="name">化州化橘红</span><span class="org">粤科金融集团</span></div>
-        <div class="product-item"><span class="name">北界镇红米黑米</span><span class="org">中国邮政广东分公司</span></div>
-        <div class="product-item"><span class="name">紫金椒酱</span><span class="org">广新控股集团</span></div>
-        <div class="product-item"><span class="name">河源米粉</span><span class="org">南粤集团 / 能源集团</span></div>
-        <div class="product-item"><span class="name">龙门县王老吉龙之蜜</span><span class="org">广播电视网络</span></div>
-        <div class="product-item"><span class="name">惠东县腊味</span><span class="org">省国资委</span></div>
-        <div class="product-item"><span class="name">揭西县谷物鸡蛋</span><span class="org">广物控股集团</span></div>
-        <div class="product-item"><span class="name">平远县山茶油</span><span class="org">中国南方航空</span></div>
-    </div>
-
-    <!-- 核心业务 -->
-    <h2 class="section-title">核心业务</h2>
-    <div class="grid-2col">
-        <div class="card"><h4>🌾 消费帮扶产品</h4><p>承接国资国企消费帮扶任务，整合帮扶地区优质农产品，通过小程序商城、企业内购、线下展销等渠道品牌化推广，建立全链路品控体系。</p></div>
-        <div class="card"><h4>🎁 企业福利集采</h4><p>面向省属国企及驻粤央企，提供节日福利、生日慰问、工会礼品等一站式集采，支持企业专属商城、福利额度管理、多档位套餐。</p></div>
-        <div class="card"><h4>📅 节庆礼品定制</h4><p>聚焦中秋、春节等节点，整合酒类及优质供应链，推出礼盒、伴手礼、企业定制礼品，提供品牌定制、包装设计等增值服务。</p></div>
-        <div class="card"><h4>📱 小程序商城运营</h4><p>自主运营微信小程序商城，承载商品展示、交易、会员、营销、数据分析全流程，支持B2B与C端双模式，保障用户体验。</p></div>
-    </div>
-
-    <!-- 乡村振兴 -->
-    <h2 class="section-title">助力乡村振兴</h2>
-    <h3 class="section-title-sm">消费帮扶实践</h3>
-    <ul class="styled-list">
-        <li>深度整合广东省内外帮扶地区优质农产品，建立从田间到餐桌的供应链体系。</li>
-        <li>小程序商城开设消费帮扶专区，按地域设立广东馆、广西馆、贵州馆、新疆馆等。</li>
-        <li>推动帮扶产品走进企业饭堂、工会福利、员工内购，拓宽销售渠道。</li>
-        <li>探索“节庆消费+帮扶产品”融合，提升帮扶产品销量与品牌影响力。</li>
-    </ul>
-    <div class="highlight-box">
-        <h4 style="font-weight:700; color:#3d2d22;">帮扶产品品牌化路径</h4>
-        <p style="font-size:14px;">借鉴“罗平稻米”“河源米粉”“梅州平远花生油”等经验，建立国资国企帮扶产品品牌化标准体系，从产品筛选、品质管控、包装设计、品牌传播等维度提升市场竞争力。</p>
-    </div>
-
-    <!-- 展望未来 -->
-    <h2 class="section-title">合作共赢 · 展望未来</h2>
-    <p style="font-size:15px;"><strong>凝聚国资优势，赋能乡村振兴</strong> —— 立足广物控股与省属国企体系，辐射粤港澳大湾区。</p>
-    <div class="future-grid">
-        <div class="future-item"><h4>📈 规模化发展</h4><p>2027年全面迈入规模化运营，扩大SKU、客户与体量，力争成为省属国资体系标杆。</p></div>
-        <div class="future-item"><h4>🏷️ 品牌化升级</h4><p>系统性打造国资国企帮扶臻品品牌矩阵，提升产品附加值及消费者认知。</p></div>
-        <div class="future-item"><h4>💻 数字化赋能</h4><p>持续优化小程序商城，引入数据驱动运营，构建智能化选品、定价、营销决策体系。</p></div>
-        <div class="future-item"><h4>🌱 乡村振兴深化</h4><p>深入落实“百千万工程”，扩大帮扶产品覆盖面，探索“消费帮扶+”创新模式。</p></div>
-    </div>
-
-    <div style="background: #ede7e1; border-radius: 40px; padding: 14px 20px; margin: 20px 0 12px 0; text-align: center; font-weight: 500; color: #31261f; border: 1px solid #d8cbbc;">
-        <span style="display: inline-block; margin: 0 6px;">以资源厚积支撑企业发展基础</span>
-        <span style="display: inline-block; margin: 0 6px;">以差异化服务牢筑竞争壁垒</span>
-        <span style="display: inline-block; margin: 0 6px;">以务实行动实现长期价值</span>
-    </div>
-
-    <p style="text-align: center; font-size: 15px; font-weight: 500; color: #4f3d2f;">—— 华侨友谊供应链公司期待与各方合作伙伴携手共进，共创美好未来 ——</p>
-
-    <!-- 底部联系 -->
-    <div class="footer-meta">
-        <div class="address">📍 广东省广州市天河区天河东路65号</div>
-        <div class="contact">联系电话：待定 ｜ 邮箱：待定</div>
-        <div class="footer-tag">凝聚国资优势 · 赋能乡村振兴</div>
-        <div style="margin-top: 10px; font-size: 12px; color: #a18b7a;">广东华侨友谊供应链管理有限公司 · 企业介绍</div>
-    </div>
-
-</div>
 </body>
 </html>
